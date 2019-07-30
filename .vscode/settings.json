@@ -1,0 +1,8 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#331D6C",
+        "titleBar.activeBackground": "#472997",
+        "titleBar.activeForeground": "#FCFBFE"
+    },
+    "python.pythonPath": "/Users/lydiathornton/.local/share/virtualenvs/backend-DqRRpaed/bin/python"
+}
