@@ -2,7 +2,7 @@
 
 # initial endpoint
 
-GET: /api/rooms
+### GET: /api/rooms
 
 HTTP 200 OK
 Allow: GET, POST, HEAD, OPTIONS
@@ -17,7 +17,7 @@ Vary: Accept
 ]
 
 
-POST: /api-token-auth
+### POST: /api-token-auth
 
 HTTP 200 OK
 Allow POST, HEAD, OPTIONS
