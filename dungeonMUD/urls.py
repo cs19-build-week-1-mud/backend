@@ -19,6 +19,8 @@ from django.urls import path, include
 from rest_framework import routers
 from rooms.api import RoomViewSet
 
+from rest_framework.authtoken import views
+
 router = routers.DefaultRouter()
 router.register('rooms', RoomViewSet)
 
@@ -26,4 +28,5 @@ router.register('rooms', RoomViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api-token-auth/', views.obtain_auth_token)
 ]
