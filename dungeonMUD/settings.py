@@ -27,13 +27,14 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['dungeon-mud-backup.herokuapp.com', 'localhost', 'https://dungeon-mud-backup.herokuapp.com/api/rooms/']
+ALLOWED_HOSTS = ['dungeon-mud-backup.herokuapp.com', 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'rooms',
+    'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
     'django.contrib.admin',
@@ -53,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'dungeonMUD.urls'
@@ -147,3 +149,7 @@ STATICFILES_DIRS = (
 
 django_heroku.settings(locals())
 del DATABASES['default']['OPTIONS']['sslmode']
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3dc831c6065a9b7eeabf90e098b4af5f04f99974
