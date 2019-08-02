@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['dungeon-mud-backup.herokuapp.com', 'localhost', 'https://dungeon-mud-backup.herokuapp.com/api/rooms/']
+ALLOWED_HOSTS = ['dungeon-mud-backup.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -144,5 +144,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-# django_heroku.settings(locals())
-# del DATABASES['default']['OPTIONS']['sslmode']
+django_heroku.settings(locals())
+del DATABASES['default']['OPTIONS']['sslmode']
